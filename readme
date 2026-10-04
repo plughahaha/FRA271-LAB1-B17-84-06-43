@@ -1,0 +1,56 @@
+FRA271-LAB1-B17-84-06-43/
+│
+├── 📁 scripts/                              # โฟลเดอร์สคริปต์ MATLAB สำหรับประมวลผลสัญญาณ
+│   ├── 📁 encoder/                          # สคริปต์วิเคราะห์ Rotary Encoder
+│   │   ├── POTGAP_AMT.m                     # วิเคราะห์สัญญาณ AMT105 Encoder
+│   │   └── POTGAP_AMT_BOURNS.m              # วิเคราะห์และเปรียบเทียบสัญญาณ AMT105 กับ Bourns Encoder
+│   ├── 📁 loadcell/                         # สคริปต์วิเคราะห์ Load Cell
+│   │   └── POTGAP_LOAD.m                    # วิเคราะห์น้ำหนักและปรับสเกล Load Cell
+│   ├── 📁 magnetic/                         # สคริปต์วิเคราะห์ Magnetic Sensor
+│   │   └── POTGAP_MAG.m                     # วิเคราะห์การตอบสนองของเซนเซอร์แม่เหล็ก
+│   └── 📁 poten/                            # สคริปต์วิเคราะห์ Potentiometer & Schmitt Trigger
+│       ├── POTGAP_POTEN_A.m                 # วิเคราะห์ Rotary Potentiometer Type A
+│       ├── POTGAP_POTEN_B.m                 # วิเคราะห์ Rotary Potentiometer Type B
+│       ├── POTGAP_POTEN_C.m                 # วิเคราะห์ Rotary Potentiometer Type C
+│       ├── POTGAP_POTEN_SLIDE.m             # วิเคราะห์ Slide Potentiometer
+│       ├── POTGAP_POTEN_SLIDE_A.m           # วิเคราะห์ Slide Potentiometer Type A
+│       ├── POTGAP_POTEN_schmitt.m           # วิเคราะห์วงจร Schmitt Trigger
+│       └── POTGAP_schmitt_ro.m              # วิเคราะห์ Rotary Poten ร่วมกับ Schmitt Trigger
+│
+├── 📁 sensor_data/                          # โฟลเดอร์รวมชุดข้อมูลดิบจากการทดลอง (Raw Data)
+│   ├── 📁 labencoder/                       # ชุดข้อมูลทดลอง Rotary Encoder[cite: 6]
+│   │   ├── 📁 AMT105/                       # เซนเซอร์ AMT105 Capacitive Modular Encoder[cite: 6]
+│   │   │   ├── 📁 Homing Sequence/          # ข้อมูลสภาวะ Homing[cite: 6]
+│   │   │   ├── 📁 ccw/                      # หมุนทวนเข็มนาฬิกาปกติ[cite: 6]
+│   │   │   ├── 📁 ccw_fast/                 # หมุนทวนเข็มความเร็วสูง[cite: 6]
+│   │   │   ├── 📁 ccw_slow/                 # หมุนทวนเข็มความเร็วต่ำ[cite: 6]
+│   │   │   ├── 📁 cw/                       # หมุนตามเข็มนาฬิกาปกติ[cite: 6]
+│   │   │   ├── 📁 cw_fast/                  # หมุนตามเข็มความเร็วสูง[cite: 6]
+│   │   │   ├── 📁 cw_slow/                  # หมุนตามเข็มความเร็วต่ำ[cite: 6]
+│   │   │   └── 📁 overflow/                 # สภาวะ Counter Overflow[cite: 6]
+│   │   ├── 📁 BOURNS/                       # เซนเซอร์ Bourns Encoder[cite: 6]
+│   │   │   ├── 📁 ccwBOURNS/                # หมุนทวนเข็มนาฬิกา[cite: 6]
+│   │   │   └── 📁 cwBOURNS/                 # หมุนตามเข็มนาฬิกา[cite: 6]
+│   │   └── 📁 OUTPUT_GRAPHS/                # กราฟผลลัพธ์จากการประมวลผล Encoder[cite: 6]
+│   │
+│   ├── 📁 labload/                          # ชุดข้อมูลทดลอง Load Cell[cite: 6]
+│   │   ├── 📁 1kg/ ... 📁 10kg/              # ข้อมูลถ่วงน้ำหนักตามมวล 1 kg ถึง 10 kg[cite: 6]
+│   │   ├── 📁 template1-shield/             # ชุดข้อมูลทดสอบ Shield 1[cite: 6]
+│   │   ├── 📁 template2/                    # ชุดข้อมูลทดสอบ Template 2[cite: 6]
+│   │   ├── 📁 template3-shield/             # ชุดข้อมูลทดสอบ Shield 3[cite: 6]
+│   │   ├── 📁 template4-shield/             # ชุดข้อมูลทดสอบ Shield 4[cite: 6]
+│   │   ├── 📁 template5-shield/             # ชุดข้อมูลทดสอบ Shield 5[cite: 6]
+│   │   ├── LoadCell_ADC_Dark.png            # กราฟเปรียบเทียบ Weight vs ADC Count[cite: 6]
+│   │   └── LoadCell_Voltage_Dark.png        # กราฟเปรียบเทียบ Weight vs Voltage[cite: 6]
+│   │
+│   └── 📁 labpo/                            # ชุดข้อมูลทดลอง Potentiometer & Schmitt Trigger[cite: 6]
+│       ├── 📁 OUTPUT_GRAPHS_Schmitt_RO/     # โฟลเดอร์เก็บกราฟ Schmitt Trigger & Rotary Poten[cite: 6]
+│       ├── 📁 potenroA/                     # Rotary Potentiometer Type A[cite: 6]
+│       ├── 📁 potenroB/                     # Rotary Potentiometer Type B[cite: 6]
+│       ├── 📁 potenroC/                     # Rotary Potentiometer Type C[cite: 6]
+│       ├── 📁 potenslide/                   # Slide Potentiometer[cite: 6]
+│       ├── 📁 potenslideA/                  # Slide Potentiometer Type A[cite: 6]
+│       ├── 📁 triggerA/                     # Schmitt Trigger + Poten Type A[cite: 6]
+│       ├── 📁 triggerB/                     # Schmitt Trigger + Poten Type B[cite: 6]
+│       ├── 📁 triggerC/                     # Schmitt Trigger + Poten Type C[cite: 6]
+│       └── 📁 trigger_ro/                   # Schmitt Trigger + Rotary Poten[cite: 6]
